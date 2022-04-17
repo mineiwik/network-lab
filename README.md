@@ -1,4 +1,4 @@
-# Network-Lab - Create your own virtual network lab
+# Network-Lab - Create your own virtual networking lab
 
 ## Requirements
 - Linux
