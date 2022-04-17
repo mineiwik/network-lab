@@ -1,0 +1,13 @@
+**/__pycache__
+
+venv/
+
+configs/*
+!configs/default.yaml
+
+docker-compose.yml
+goto.sh
+04-link-containers.sh
+05-configure-switches.sh
+06-configure-vlans.sh
+07-configure-hosts.sh

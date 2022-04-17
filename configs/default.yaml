@@ -1,0 +1,34 @@
+hosts:
+  HOST1: bea9f52a-57aa-489b-b6ba-de9207357a97
+  HOST2: 1e643d62-add0-484f-9a39-189e904ced61
+links:
+  ROUTER1_ROUTER2:
+    connections:
+      ROUTER1: port_ROUTER2
+      ROUTER2: port_ROUTER1
+    type: veth
+  ROUTER1_S1:
+    connections:
+      ROUTER1: port_S1
+      S1: port_ROUTER1
+    type: veth
+  S1_HOST1:
+    connections:
+      HOST1: port_S1
+      S1: port_HOST1
+    type: veth
+  S1_HOST2:
+    connections:
+      HOST2: port_S1
+      S1: port_HOST2
+    type: veth
+routers:
+  ROUTER1: 52a61250-9d6e-488e-9cc5-0b8933bcf8a1
+  ROUTER2: 5c628d04-c921-44f7-9d86-ddc845e2187c
+switches:
+  S1: 74929408-ace0-46b4-8abe-8be746d0cd3c
+vlans:
+  ROUTER1:
+    port_S1:
+      - 10
+      - 20
