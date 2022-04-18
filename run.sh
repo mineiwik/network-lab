@@ -43,6 +43,7 @@ chmod +x 05-configure-switches.sh
 chmod +x 06-configure-vlans.sh
 chmod +x 07-configure-hosts.sh
 chmod +x goto.sh
+chmod +x .goto_completion
 
 echo "------------------------------"
 echo "----------- Step 2 -----------"
@@ -106,5 +107,8 @@ echo "------------------------------"
 echo "Configuring hosts"
 sh ./07-configure-hosts.sh &> /dev/null
 
+directory=$(pwd)
+
 echo "Network Lab has been started"
 echo "Type ./goto.sh APLIANCE_NAME to enter the appliance's shell"
+echo "Add \"source ${directory}/.goto_completion\" to your runcom file for autocompletion"

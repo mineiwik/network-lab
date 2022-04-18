@@ -1,0 +1,11 @@
+goto_complete() {
+        local narg="${#COMP_WORDS[@]}" regex
+        appliances=$(sed -n 's/^if.*appliance}" == "\(.*\)" ].*/\1/p' "$1" | sort -u)
+        # First argument is being completed
+        l=$(echo "$appliances")
+        COMPREPLY=($l)
+        return
+
+}
+
+complete -F goto_complete goto.sh
